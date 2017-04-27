@@ -14,6 +14,26 @@ fn test_unique() {
 	// ok
 }
 
+#[test]
+fn test_count() {
+	let a = permutate(&vec![1,2]);
+	println!("{}", a.len() == 3);
+
+	let a = permutate(&vec![1,2,3]);
+	println!("{}", a.len() == 7 );
+
+	let a = permutate(&vec![1,2,3,4]);
+	println!("{}", a.len() == 15);
+
+	let a = permutate(&vec![1,2,3,4,5]);
+	println!("{}", a.len() == 31);
+
+	let a = permutate(&vec![1,2,3,4,5,6]);
+	println!("{}", a.len() == 63);
+
+	// ok
+}
+
 pub fn permutate(source: &Vec<u8>) -> Vec<Vec<u8>> {
 	let mut root = Node::new(vec![]);
 	for val in source.iter() {
