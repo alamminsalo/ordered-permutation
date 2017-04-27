@@ -16,10 +16,10 @@ fn unique() {
 
 #[test]
 fn count() {
-	let a = permutate(&vec![1,2]);
+	let a = permutate(&[1,2]);
 	println!("{}", a.len() == 3);
 
-	let a = permutate(&vec![1,2,3]);
+	let a = permutate(&[1,2,3]);
 	println!("{}", a.len() == 7 );
 
 	let a = permutate(&vec![1,2,3,4]);
@@ -34,7 +34,7 @@ fn count() {
 	// ok
 }
 
-pub fn permutate(source: &Vec<u8>) -> Vec<Vec<u8>> {
+pub fn permutate(source: &[u8]) -> Vec<Vec<u8>> {
 	let mut root = Node::new(vec![]);
 	for val in source.iter() {
 		root.insert(*val);
