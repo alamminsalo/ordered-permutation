@@ -1,8 +1,17 @@
+// check that results are unique
 #[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-    }
+#[test]
+fn test_unique() {
+	let a = permutate(&vec![1,2,3,4,5]);
+
+	let mut b: Vec<Vec<u8>> = vec![];
+
+	for v in a.iter() {
+		assert!(!b.contains(&v));
+		b.push(v.clone());
+	}
+
+	// ok
 }
 
 pub fn permutate(source: &Vec<u8>) -> Vec<Vec<u8>> {
