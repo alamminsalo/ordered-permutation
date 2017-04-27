@@ -1,7 +1,7 @@
 // check that results are unique
 #[cfg(test)]
 #[test]
-fn test_unique() {
+fn unique() {
 	let a = permutate(&vec![1,2,3,4,5]);
 
 	let mut b: Vec<Vec<u8>> = vec![];
@@ -15,7 +15,7 @@ fn test_unique() {
 }
 
 #[test]
-fn test_count() {
+fn count() {
 	let a = permutate(&vec![1,2]);
 	println!("{}", a.len() == 3);
 
