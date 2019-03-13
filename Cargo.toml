@@ -2,5 +2,7 @@
 name = "ordered-permutation"
 version = "0.1.1"
 authors = ["alamminsalo"]
+description = "Generates ordered permutations from vector of integers"
+license = "MIT"
 
 [dependencies]
